@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clon Pinterest</title>
+  <!-- Link css -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <!-- =========== PREVIEW IMG =========== -->
+  <div class="lightbox">
+    <div class="wrapper w-[70%] md:w-auto">
+      <header>
+        <div class="photographer flex items-center gap-1 mt-0">
+          <svg viewBox="0 0 24 24" fill="currentColor" data-slot="icon" class="w-10 h-10" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" style="fill: rgb(181, 181, 181);"/>
+          </svg>
+          <span></span>
+        </div>
+        <div class="buttons flex items-center gap-2 ">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="downloadBtn w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>  
+          </div>        
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" data-slot="icon" class="closeBtn w-4 h-4">
+              <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+            </svg>
+          </div>
+        </div>
+      </header>
+      <div class="preview_img">
+        <div class="img">
+          <img src="" alt="preview_img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========== HEADER =========== -->
+  <header class="container">
+    <nav class="nav_bar menu_top hidden md:block">
+      <ul class="nav_list gap-4 md:gap-4">
+
+        <div class="flex items-center">
+          <li>
+            <a class="" href="#">
+              <img class="nav_logo mr-3" src="./img/logo.svg" alt="logo_pinterest">
+            </a>
+          </li>
+
+          <li>
+            <a class="nav_link active flex items-center" href="#">
+              Inicio
+              <i class="fa-solid fa-chevron-down ml-2" id="nav_arrow"></i>
+            </a>
+            <ul class="absolute nav_dropdown">
+              <li class="">
+                <a href="#">Explorar</a>
+              </li>
+              <li>
+                <a href="#">Crear</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="nav_link hidden md:block" href="#">Explorar</a>
+          </li>
+          <li>
+            <a class="nav_link hidden md:block" href="#">Crear</a>
+          </li>
+        </div>
+
+        <div class="w-[100%]">
+          <li class="search_bar w-[100%]">
+            <div class="search_box">
+              <div class="search_box_icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input type="text" class="input" placeholder="Search">
+            </div>
+          </li>
+        </div>
+
+        <div class="flex gap-5 items-center">
+          <li>
+            <a class="nav_icon notificaciones" href="#">
+              <img class="nav_img" src="./img/notificaciones.svg" alt="logo_pinterest">
+            </a>
+          </li>
+          <li>
+            <a class="nav_icon mensajes" href="#">
+              <img class="nav_img" src="./img/mensajes.svg" alt="notificaciones_pinterest">
+            </a>
+          </li>
+          <li>
+            <a class="" href="#">
+              <img class="nav_img" src="./img/user.png" alt="mensajes_pinterest">
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+
+    <nav class="menu_bottom md:hidden">
+      <div class="nav" id="nav-menu">
+        <ul class="nav_list_bottom">
+          <li class="nav_item_bottom">
+            <a href="#" class="nav_link_bottom">
+              <img class="nav_icon_bottom" src="./img/home.svg" alt="#">
+            </a>
+          </li>
+
+          <li class="nav_item_bottom">
+            <a href="#" class="nav_link_bottom">
+              <img class="nav_icon_bottom" src="./img/search.svg" alt="#">
+            </a>
+          </li>
+
+          <li class="nav_item_bottom">
+            <a href="#" class="nav_link_bottom">
+              <img class="nav_icon_bottom" src="./img/mensajes.svg" alt="#">
+            </a>
+          </li>
+
+          <li class="nav_item_bottom">
+            <a href="#" class="nav_link_bottom">
+              <img class="nav_icon_bottom nav_img_icon_bottom" src="./img/user.png" alt="#">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container container-grid ">
+    <section class=" grid-pinterest">
+      <div class="boxes">
+      </div>
+    </section>
+    <section class="mt-4">
+      <div class="load_more">
+        <button class="btn">Cargar más</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- <footer > 
+    <p class="mt-[100px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus perferendis dolores expedita, vitae ut distinctio necessitatibus, eligendi, incidunt rem ea cumque delectus. Dignissimos eius quos voluptates enim sint omnis.</p>
+  </footer> -->
+
+  <script src="./js/main.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/d5e47f3005.js"></script>
+</body>
+
+</html>
